@@ -28,7 +28,16 @@ $(function () {
            
        }
    } ); 
-});
+    $("#fruit1").mouseover(function(){
+        score ++;
+        $("#scorevalue").html(score);//update score value
+        $("#slicesound")[0].play();//play sound
+        clearInterval(action);//stop fruit
+        $("#fruit1").hide("explode", 400);
+        setTimeout(startAction, 400);
+        
+    });  
+
 // no. of trails left 
 function addHearts(){
     $("#trailsLeft").empty();
@@ -77,7 +86,7 @@ function startAction(){
            }
            
        }
-    } , 7);
+    } , 5);
     
 }
  function chooseFruit(){//function for random fruit
@@ -88,3 +97,4 @@ function stopAction(){
     clearInterval(action);
     $("#fruit1").hide();
 }
+});
