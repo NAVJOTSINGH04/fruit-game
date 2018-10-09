@@ -49,6 +49,8 @@ html{
     text-align: center;
     font-family: cursive, sans-serif;
     color: black;
+    position: relative;
+    overflow: hidden;
 }
 
 #instruction{
@@ -82,7 +84,7 @@ html{
     -ms-transition: all 0.2s;   
 }
 
-#timeremaining{
+#trailsLeft{
     width: 103px;
     padding: 10px;
     position: absolute;
@@ -112,6 +114,14 @@ html{
     top: 195px;
     left: 208px;
     z-index: 2;
-/*    display: none;*/
+    display: none;
     
+}
+
+#heart {
+    margin: 0px 5px;
+}
+.fruit{
+    display: none;
+    position: absolute;
 }
